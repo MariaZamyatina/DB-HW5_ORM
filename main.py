@@ -21,58 +21,6 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 # создание объектов
-# shop1 = m.Shop(name='Лабиринт')
-# shop2 = m.Shop(name='Буквоед')
-# shop3 = m.Shop(name='Книжный дом')
-#
-# pub1 = m.Publisher(name='Пушкин')
-# pub2 = m.Publisher(name='Достоевский')
-# pub3 = m.Publisher(name='Джойс')
-#
-# book1 = m.Book(title='Капитанская дочка', publisher=pub1)
-# book2 = m.Book(title='Руслан и Людмила', publisher=pub1)
-# book3 = m.Book(title='Евгений Онегин', publisher=pub1)
-# book4 = m.Book(title='Бесы', publisher=pub2)
-# book5 = m.Book(title='Преступление и наказание', publisher=pub2)
-# book6 = m.Book(title='Идиот', publisher=pub2)
-# book7 = m.Book(title='Улисс', publisher=pub3)
-# book8 = m.Book(title='Поминки по Финнегану', publisher=pub3)
-# book9 = m.Book(title='Дублинцы', publisher=pub3)
-#
-# stock1 = m.Stock(count=100, shops=shop1, books=book1)
-# stock2 = m.Stock(count=80, shops=shop1, books=book2)
-# stock3 = m.Stock(count=100, shops=shop2, books=book2)
-# stock4 = m.Stock(count=100, shops=shop3, books=book1)
-# stock5 = m.Stock(count=100, shops=shop3, books=book3)
-# stock6 = m.Stock(count=100, shops=shop1, books=book3)
-# stock7 = m.Stock(count=100, shops=shop2, books=book3)
-# stock8 = m.Stock(count=100, shops=shop3, books=book6)
-# stock9 = m.Stock(count=100, shops=shop1, books=book9)
-# stock10 = m.Stock(count=100, shops=shop2, books=book6)
-# stock11 = m.Stock(count=100, shops=shop1, books=book4)
-# stock12 = m.Stock(count=100, shops=shop2, books=book4)
-# stock13 = m.Stock(count=100, shops=shop1, books=book5)
-# stock14 = m.Stock(count=100, shops=shop3, books=book5)
-#
-# sale1 = m.Sale(price=500, date_sale="2022-11-11", count=10, stocks=stock1)
-# sale2 = m.Sale(price=660, date_sale="2022-11-12", count=5, stocks=stock2)
-# sale3 = m.Sale(price=520, date_sale="2022-10-30", count=10, stocks=stock3)
-# sale4 = m.Sale(price=470, date_sale="2022-11-04", count=10, stocks=stock4)
-# sale5 = m.Sale(price=460, date_sale="2022-11-06", count=15, stocks=stock5)
-# sale6 = m.Sale(price=820, date_sale="2022-11-01", count=10, stocks=stock6)
-# sale7 = m.Sale(price=510, date_sale="2022-10-29", count=15, stocks=stock7)
-# sale8 = m.Sale(price=630, date_sale="2022-11-02", count=10, stocks=stock8)
-# sale9 = m.Sale(price=500, date_sale="2022-11-10", count=10, stocks=stock9)
-# sale10 = m.Sale(price=610, date_sale="2022-11-13", count=10, stocks=stock10)
-# sale11 = m.Sale(price=510, date_sale="2022-10-29", count=15, stocks=stock11)
-# sale12 = m.Sale(price=630, date_sale="2022-11-02", count=10, stocks=stock12)
-# sale13 = m.Sale(price=500, date_sale="2022-11-10", count=10, stocks=stock13)
-# sale14 = m.Sale(price=610, date_sale="2022-11-13", count=10, stocks=stock14)
-
-# session.add_all([shop1, shop2, shop3, pub1, pub2, pub3, book1, book2, book3, book4, book5, book6,
-#                  book7, book8, book9])
-#session.commit()  # фиксируем изменения
-
 # заполнение таблиц
 insert.insert_data(session, file='fixtures/tests_data.json')
 session.commit()
